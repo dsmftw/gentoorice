@@ -24,3 +24,4 @@ visualizer_type = "spectrum" (spectrum/wave)
 # ----------------------------------------------
 display_bitrate = "yes"
 #system_encoding = "UTF-8"
+user_interface = "alternative"
