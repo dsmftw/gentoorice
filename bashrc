@@ -18,3 +18,8 @@ fi
 # Put your fun stuff here.
 export GOPATH=$HOME/.golang
 export PATH=$PATH:$GOPATH/bin
+
+# Aliases
+alias rm='rm -vi'
+alias cp='cp -vi'
+alias mv='mv -vi'
