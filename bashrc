@@ -20,6 +20,10 @@ export GOPATH=$HOME/.golang
 export PATH=$PATH:$GOPATH/bin
 
 # Aliases
-alias rm='rm -vi'
 alias cp='cp -vi'
 alias mv='mv -vi'
+alias rm='rm -vi'
+alias rmdir='rmdir -v'
+
+# get weather for city/airport using CLI
+function wttr() { curl -s wttr.in/"$*"?lang=ru | grep -vE "feature|Follow"; }
