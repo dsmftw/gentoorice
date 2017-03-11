@@ -16,6 +16,8 @@ fi
 
 
 # Put your fun stuff here.
+
+# Environment vars
 export GOPATH=$HOME/.golang
 export PATH=$PATH:$GOPATH/bin
 
@@ -27,3 +29,8 @@ alias rmdir='rmdir -v'
 
 # get weather for city/airport using CLI
 function wttr() { curl -s wttr.in/"$*"?lang=ru | grep -vE "feature|Follow"; }
+
+# Base16 Shell
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+

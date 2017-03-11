@@ -1,22 +1,28 @@
+set nocompatible
+filetype off
+
 execute pathogen#infect()
 
-" COLORING
-filetype plugin indent on       " load filetype-specific indent files
 syntax on                       " enable syntax processing
+filetype plugin indent on       " load filetype-specific indent files
+
+" COLOR SCHEME
+
+"if filereadable(expand("~/.vimrc_background"))
+"    let base16colorspace=256
+"    source ~/.vimrc_background
+"endif
+
+set background=dark
 let g:gruvbox_italic=1          " required by gruvbox
-let g:gruvbox_termcolors=16     " required by gruvbox
-"set termguicolors
+set termguicolors
+"let g:gruvbox_termcolors=16     " required by gruvbox
 colorscheme gruvbox
-"let g:solarized_termcolors=256 " required by solarized
-"colorscheme solarized
-"colorscheme twilight
 "if $COLORTERM == 'gnome-terminal'
 "    set t_Co=256
 "endif
 "let base16colorspace=256
 "colorscheme base16-default-dark
-"colorscheme molokai
-set background=dark
 
 " SPACES/TABS
 set tabstop=4           " number of visual spaces per TAB
@@ -34,7 +40,6 @@ set relativenumber      " show relative line numbers
 set wildmenu            " visual autocomplete for command menu
 set showmatch           " highlight matching [{()}]
 set nowrap              " do not wrap lines
-set laststatus=2        " enable statusline on bottom
 "set statusline+=%F      " add full path to statusline
 
 " SEARCH
@@ -45,7 +50,19 @@ set hlsearch            " highlight matches
 " turn off search highlight
 nnoremap <Leader><space> :nohlsearch<CR>
 
-" -----------SYNTASTIC-start---------------
+" -----------AIRLINE-------------
+set laststatus=2        " enable airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'base16_default'
+" -----------AIRLINE-------------
+
+" -----------CtrlP---------------
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_switch_buffer = 'et'
+" -----------CtrlP---------------
+
+" -----------SYNTASTIC-----------
 map <Leader>s :SyntasticToggleMode<CR>
 
 set statusline+=%#warningmsg#
@@ -58,6 +75,6 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_go_checkers = ['go']
-" -----------SYNTASTIC-end-----------------
+" -----------SYNTASTIC-----------
 
 map <Leader>n :NERDTreeToggle<CR>
