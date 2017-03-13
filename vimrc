@@ -6,29 +6,34 @@ execute pathogen#infect()
 syntax on                       " enable syntax processing
 filetype plugin indent on       " load filetype-specific indent files
 
+
 " COLOR SCHEME
 
+" background fix for base16 shell colors
 "if filereadable(expand("~/.vimrc_background"))
 "    let base16colorspace=256
 "    source ~/.vimrc_background
 "endif
 
 set background=dark
-let g:gruvbox_italic=1          " required by gruvbox
 set termguicolors
-"let g:gruvbox_termcolors=16     " required by gruvbox
+let g:gruvbox_italic=1          " required by gruvbox
+"let g:gruvbox_termcolors=16
 colorscheme gruvbox
 "if $COLORTERM == 'gnome-terminal'
 "    set t_Co=256
 "endif
+"set t_ut=
 "let base16colorspace=256
 "colorscheme base16-default-dark
+
 
 " SPACES/TABS
 set tabstop=4           " number of visual spaces per TAB
 "set softtabstop=4       " number of spaces in tab when editing
 set expandtab           " tabs are spaces
 set shiftwidth=4        " number of spaces to use for each step
+
 
 " UI
 set number              " show current line number
@@ -42,6 +47,7 @@ set showmatch           " highlight matching [{()}]
 set nowrap              " do not wrap lines
 "set statusline+=%F      " add full path to statusline
 
+
 " SEARCH
 set ignorecase          " ignore case in search patterns
 set smartcase           " unless uppercase char is typed
@@ -49,6 +55,9 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 " turn off search highlight
 nnoremap <Leader><space> :nohlsearch<CR>
+
+
+" PLUGINS & KEYMAPPING
 
 " -----------AIRLINE-------------
 set laststatus=2        " enable airline
