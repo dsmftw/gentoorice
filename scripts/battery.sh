@@ -4,16 +4,16 @@ percentage=$(cat /sys/class/power_supply/BAT0/capacity)
 ac=$(cat /sys/class/power_supply/AC/online)
 
 if [[ $ac -eq 0 ]]; then
-    icon='❤'
     if [[ $percentage -ge 70 ]]; then
-        echo -n '#[fg=colour2]'
+        icon='#[fg=colour2]❤'
     elif [[ $percentage -le 20 ]]; then
-        icon='☠'
+        icon='#[default]☠'
     else
-        echo -n '#[fg=colour1]'
+        icon='#[fg=colour1]❤'
     fi
 else
-    icon='#[fg=colour3]⚡'
+    icon='#[fg=colour3]❤'
+    #icon='#[fg=colour3]⚡' lightning unicode screwed up the statusline
 fi
 
 echo -n "$icon #[default]$percentage#[fg=colour247]%"
