@@ -54,3 +54,10 @@ The `dotfiles/bootstrap.sh` script will create directories as needed and backup 
 
 Set terminal font size to **10**.
 
+## Screenshots
+
+<img src="screenshots/scr1.png" width="640" >
+
+<img src="screenshots/scr2.png" width="640" >
+
+<img src="screenshots/scr3.png" width="640" >
