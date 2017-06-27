@@ -35,6 +35,17 @@ set expandtab           " tabs are spaces
 set shiftwidth=4        " number of spaces to use for each step
 
 
+" FORGET ARROW KEYS
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+
+
 " UI
 set number              " show current line number
 set relativenumber      " show relative line numbers
@@ -86,4 +97,4 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['go']
 " -----------SYNTASTIC-----------
 
-map <Leader>n :NERDTreeToggle<CR>
+"map <Leader>n :NERDTreeToggle<CR>
