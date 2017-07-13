@@ -12,8 +12,8 @@ if [[ $ac -eq 0 ]]; then
         icon='#[fg=colour1]❤'
     fi
 else
-    icon='#[fg=colour3]❤'
-    #icon='#[fg=colour3]⚡' lightning unicode screwed up the statusline
+    icon='#[fg=colour3]★'
+    #icon='#[fg=colour3]⚡' l# tmux (terminal/font?) issue that causes unicode character to break the statusline
 fi
 
 echo -n "$icon #[default]$percentage#[fg=colour247]%"
