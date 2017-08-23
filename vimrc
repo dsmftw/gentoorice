@@ -8,31 +8,18 @@ filetype plugin indent on       " load filetype-specific indent files
 
 
 " COLOR SCHEME
-
-" background fix for base16 shell colors
-"if filereadable(expand("~/.vimrc_background"))
-"    let base16colorspace=256
-"    source ~/.vimrc_background
-"endif
-
 set background=dark
 set termguicolors
-let g:gruvbox_italic=1          " required by gruvbox
-"let g:gruvbox_termcolors=16
+let g:gruvbox_italic=1          " required by gruvbox for terminals
 colorscheme gruvbox
-"if $COLORTERM == 'gnome-terminal'
-"    set t_Co=256
-"endif
-"set t_ut=
-"let base16colorspace=256
 "colorscheme base16-default-dark
 
 
 " SPACES/TABS
-set tabstop=4           " number of visual spaces per TAB
-"set softtabstop=4       " number of spaces in tab when editing
-set expandtab           " tabs are spaces
-set shiftwidth=4        " number of spaces to use for each step
+set tabstop=2           " width of a TAB
+set shiftwidth=2        " number of spaces to use for each indent '>'
+set expandtab           " use spaces instead of TABs
+"set softtabstop=4       " number of columns in TAB
 
 
 " FORGET ARROW KEYS
@@ -49,22 +36,19 @@ inoremap <Right> <nop>
 " UI
 set number              " show current line number
 set relativenumber      " show relative line numbers
-"set showcmd             " show command in bottom bar
-"set cursorline          " highlight current line
-"hi cursorline cterm=none
-"hi cursorlinenr ctermfg=red
-set wildmenu            " visual autocomplete for command menu
+set cursorline          " highlight current line
 set showmatch           " highlight matching [{()}]
 set nowrap              " do not wrap lines
-"set statusline+=%F      " add full path to statusline
+set colorcolumn=80      " line-width marker
 
 
 " SEARCH
+set wildmenu            " visual autocomplete for command menu
 set ignorecase          " ignore case in search patterns
 set smartcase           " unless uppercase char is typed
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
-" turn off search highlight
+" turn off search pattern highlighting
 nnoremap <Leader><space> :nohlsearch<CR>
 
 
@@ -78,8 +62,17 @@ let g:airline_theme = 'base16_default'
 
 " -----------CtrlP---------------
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 'et'
+let g:ctrlp_lazy_update = 500
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git', 'cd %s && git ls-files -co --exclude-standard'],
+    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+  \ },
+  \ 'fallback': 'find %s -type f'
+\ }
 " -----------CtrlP---------------
 
 " -----------SYNTASTIC-----------

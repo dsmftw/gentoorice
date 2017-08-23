@@ -18,17 +18,21 @@ fi
 # Put your fun stuff here.
 
 # Environment vars
+NPMPATH=$HOME/.npm-global
 export GOPATH=$HOME/.golang
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$NPMPATH/bin
 
 # Aliases
-alias cp='cp -vi'
-alias mv='mv -vi'
-alias rm='rm -vi'
-alias rmdir='rmdir -v'
+cp() { command cp -v "$@"; }
+mv() { command mv -v "$@"; }
+rm() { command rm -v "$@"; }
+rmdir() { command rmdir -v "$@"; }
+
+# avoid duplicates on the shell history list
+export HISTCONTROL="$HISTCONTROL erasedups:ignoreboth"
 
 # get weather for city/airport using CLI
-function wttr() { curl -s wttr.in/"$*"?lang=ru | grep -vE "feature|Follow"; }
+function weather() { curl -s wttr.in/"$*"?lang=ru | grep -vE "feature|Follow"; }
 
 # Base16 Shell
 BASE16_SHELL=$HOME/.config/base16-shell/
