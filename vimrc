@@ -33,6 +33,16 @@ inoremap <Left> <nop>
 inoremap <Right> <nop>
 
 
+" AUTOMATIC CLOSING BRACKETS/QUOTES
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<C-o>O
+inoremap {;<CR> {<CR>};<C-o>O
+
+
 " UI
 set number              " show current line number
 set relativenumber      " show relative line numbers
