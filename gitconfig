@@ -1,0 +1,19 @@
+[include]
+	path = ~/.gitconfig.local
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+[merge]
+	tool = meld
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+	trustExitCode = false
+[alias]
+	st = status
+[credential]
+	helper = cache --timeout=7200
+[github]
+	user = dsmftw
