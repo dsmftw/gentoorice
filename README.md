@@ -1,6 +1,6 @@
 # dsmftw dotfiles
 
-* My minimalist Linux configuration files. (Tailored mostly towards my laptop distro. Desktop requires minor tweaking.)
+* My minimalist Linux configuration files. (Tailored towards my laptop distro. With some tweaking the dots can be used for the desktop which runs a different distro.)
 * A very basic bootstrap script that creates directories and symlinks.
 
 ## Installation
@@ -16,17 +16,13 @@ Strart with cloning plugins of choice.
 #### vim
 
 * [pathogen](https://github.com/tpope/vim-pathogen)
+* [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 * [gruvbox](https://github.com/morhetz/gruvbox)
+* [syntastic](https://github.com/vim-syntastic/syntastic)
 * [vim-airline](https://github.com/vim-airline/vim-airline)
 * [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
-* [syntastic](https://github.com/vim-syntastic/syntastic)
-* [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
-
-#### optional
-
-* [base16-gnome-terminal](https://github.com/chriskempson/base16-gnome-terminal)
-* [base16-vim](https://github.com/chriskempson/base16-vim)
-* [nerdtree](https://github.com/scrooloose/nerdtree)
+* [vim-json](https://github.com/elzr/vim-json)
+* [vim-surround](https://github.com/tpope/vim-surround)
 
 ### install dotfiles
 
