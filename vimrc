@@ -22,6 +22,34 @@ set expandtab           " use spaces instead of TABs
 "set softtabstop=4       " number of columns in TAB
 
 
+" UI
+set number              " show current line number
+set relativenumber      " show relative line numbers
+set cursorline          " highlight current line
+set showmatch           " highlight matching [{()}]
+set nowrap              " do not wrap lines
+set colorcolumn=80      " line-width marker
+
+
+" SEARCH
+set wildmenu            " visual autocomplete for command menu
+set ignorecase          " ignore case in search patterns
+set smartcase           " unless uppercase char is typed
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+" turn off search pattern highlighting
+nnoremap <Leader><space> :nohlsearch<CR>
+
+
+" SPLITS
+set splitbelow
+set splitright
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
 " FORGET ARROW KEYS
 noremap <Up> <nop>
 noremap <Down> <nop>
@@ -41,25 +69,6 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<C-o>O
 inoremap {;<CR> {<CR>};<C-o>O
-
-
-" UI
-set number              " show current line number
-set relativenumber      " show relative line numbers
-set cursorline          " highlight current line
-set showmatch           " highlight matching [{()}]
-set nowrap              " do not wrap lines
-set colorcolumn=80      " line-width marker
-
-
-" SEARCH
-set wildmenu            " visual autocomplete for command menu
-set ignorecase          " ignore case in search patterns
-set smartcase           " unless uppercase char is typed
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
-" turn off search pattern highlighting
-nnoremap <Leader><space> :nohlsearch<CR>
 
 
 " PLUGINS & KEYMAPPING

@@ -27,6 +27,8 @@ cp() { command cp -v "$@"; }
 mv() { command mv -v "$@"; }
 rm() { command rm -v "$@"; }
 rmdir() { command rmdir -v "$@"; }
+alias vimrc='vim $HOME/dotfiles/vimrc'
+alias bashrc='vim $HOME/dotfiles/bashrc'
 
 # Avoid duplicates on the shell history list
 export HISTCONTROL="$HISTCONTROL erasedups:ignoreboth"
