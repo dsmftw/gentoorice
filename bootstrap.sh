@@ -2,7 +2,7 @@
 
 src=~/dotfiles
 dst=~
-files="bashrc gitconfig tmux.conf vimrc config/redshift.conf config/mpd/mpd.conf config/ncmpcpp/config config/zathura/zathurarc"
+files="bashrc gitconfig tmux.conf vimrc xinitrc Xresources config/redshift.conf config/mpd/mpd.conf config/ncmpcpp/config config/zathura/zathurarc"
 
 mkdir -pv $dst/.config/{mpd,ncmpcpp,zathura}
 
