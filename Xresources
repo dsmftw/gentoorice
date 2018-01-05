@@ -1,4 +1,11 @@
-! ----------rofi settings----------
+! ----------urxvt----------
+
+URxvt.scrollBar: false
+URxvt.font: xft:hack:size=10
+URxvt.letterSpace: 0
+
+
+! ----------rofi-----------
 ! rofi-theme: gruvbox-dark
 
 !rofi.font:                hack regular 11
