@@ -8,12 +8,12 @@ URxvt.letterSpace: 0
 ! ----------rofi-----------
 ! rofi-theme: gruvbox-dark
 
-!rofi.font:                hack regular 11
+rofi.font:                hack regular 14
 rofi.lines:               6
 rofi.hide-scrollbar:      true
-!rofi.separator-style:     solid
+rofi.separator-style:     solid
 rofi.width:               40
-rofi.padding:             20
+rofi.padding:             30
 !rofi.columns:             2
 rofi.bw:                  1
 !rofi.eh:                  2

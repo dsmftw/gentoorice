@@ -15,23 +15,30 @@ if [[ $- != *i* ]] ; then
 fi
 
 
-# Put your fun stuff here.
-
-# Environment vars
+# Path vars
 NPMPATH=$HOME/.npm-global
 export GOPATH=$HOME/.golang
 export PATH=$PATH:$GOPATH/bin:$NPMPATH/bin
 
 # Aliases
-cp() { command cp -v "$@"; }
-mv() { command mv -v "$@"; }
-rm() { command rm -v "$@"; }
-rmdir() { command rmdir -v "$@"; }
+cp () { command cp -v "$@" ; }
+mv () { command mv -v "$@" ; }
+rm () { command rm -v "$@" ; }
+rmdir () { command rmdir -v "$@" ; }
+unalias ls
+ls () { command ls -F -h -v --color=auto --time-style=long-iso "$@" ; }
+alias ll='ls -l'
+alias la='ls -lA'
 alias vimrc='vim $HOME/dotfiles/vimrc'
 alias bashrc='vim $HOME/dotfiles/bashrc'
 
-# Avoid duplicates on the shell history list
-export HISTCONTROL="$HISTCONTROL erasedups:ignoreboth"
+# Bash history
+export HISTFILESIZE=-1
+export HISTSIZE=-1
+export HISTTIMEFORMAT="[%F %T] "
+export HISTIGNORE="history*:pwd:ls*:screenfetch*:ncdu:ranger*:bashrc*:vimrc*"
+export HISTCONTROL=ignoreboth:erasedups
+shopt -s histappend
 
 # Get weather for city/airport using CLI
 function weather() { curl -s wttr.in/"$*"?lang=ru | grep -vE "feature|Follow"; }
