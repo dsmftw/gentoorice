@@ -25,7 +25,7 @@ cp () { command cp -v "$@" ; }
 mv () { command mv -v "$@" ; }
 rm () { command rm -v "$@" ; }
 rmdir () { command rmdir -v "$@" ; }
-unalias ls
+[[ $(type -t ls) == "alias" ]] && unalias ls
 ls () { command ls -F -h -v --color=auto --time-style=long-iso "$@" ; }
 alias ll='ls -l'
 alias la='ls -lA'
@@ -36,7 +36,7 @@ alias bashrc='vim $HOME/dotfiles/bashrc'
 export HISTFILESIZE=-1
 export HISTSIZE=-1
 export HISTTIMEFORMAT="[%F %T] "
-export HISTIGNORE="history*:pwd:ls*:screenfetch*:ncdu:ranger*:bashrc*:vimrc*"
+export HISTIGNORE="history*:pwd:ls:ll:la:screenfetch*:ncdu:ranger*:bashrc*:vimrc*"
 export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
