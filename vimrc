@@ -71,6 +71,10 @@ inoremap {<CR> {<CR>}<C-o>O
 inoremap {;<CR> {<CR>};<C-o>O
 
 
+" TOGGLE SPELL-CHECKING
+nmap <silent> <Leader>s :set spell!<CR>
+
+
 " PLUGINS & KEYMAPPING
 
 " -----------AIRLINE-------------
@@ -95,7 +99,7 @@ let g:ctrlp_user_command = {
 " -----------CtrlP---------------
 
 " -----------SYNTASTIC-----------
-map <Leader>s :SyntasticToggleMode<CR>
+map <Leader>c :SyntasticToggleMode<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
