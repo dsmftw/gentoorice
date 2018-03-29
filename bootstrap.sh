@@ -5,6 +5,7 @@ dst="$HOME"
 declare -a files=(
 "bashrc" "gitconfig" "tmux.conf" "vimrc" "xinitrc" "Xresources"
 "config/redshift.conf"
+"config/autostart/conky.desktop"
 "config/conky/conky.conf"
 "config/mpd/mpd.conf"
 "config/mpv/mpv.conf"
@@ -14,7 +15,7 @@ declare -a files=(
 "config/zathura/zathurarc"
 )
 
-mkdir -pv "$dst"/.config/{conky,mpd,mpv,ncmpcpp,ranger,zathura}
+mkdir -pv "$dst"/.config/{autostart,conky,mpd,mpv,ncmpcpp,ranger,zathura}
 
 printf "\nCreating symlinks...\n"
 for file in "${files[@]}"; do

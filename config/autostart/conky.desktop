@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=conky
+Exec=conky --daemonize --pause=22
+StartupNotify=false
+Terminal=false
