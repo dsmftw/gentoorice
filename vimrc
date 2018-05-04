@@ -1,6 +1,3 @@
-set nocompatible
-filetype off
-
 execute pathogen#infect()
 
 syntax on                       " enable syntax processing
@@ -17,9 +14,9 @@ colorscheme gruvbox
 
 " SPACES/TABS
 set tabstop=2           " width of a TAB
+"set softtabstop=2       " number of columns in TAB
 set shiftwidth=2        " number of spaces to use for each indent '>'
 set expandtab           " use spaces instead of TABs
-"set softtabstop=4       " number of columns in TAB
 
 
 " UI
