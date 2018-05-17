@@ -71,7 +71,7 @@ The `dotfiles/bootstrap.sh` script will create directories as needed and backup 
 * media-fonts/powerline-symbols
     * needed for `vim-airline`
 
-Set terminal font size to **10**.
+Set terminal font size to **9**.
 
 ## Screenshots
 

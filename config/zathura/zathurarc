@@ -1,4 +1,12 @@
 set selection-clipboard clipboard
+set window-title-basename true
+set statusbar-home-tilde true
+set zoom-step 20
 
 set default-bg "#282828"
 set default-fg "#ebdbb2"
+
+map <S-p> toggle_page_mode
+map <S-t> toggle_statusbar
+map [fullscreen] <S-p> toggle_page_mode
+map [fullscreen] <S-t> toggle_statusbar
