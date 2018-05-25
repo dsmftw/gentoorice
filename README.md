@@ -1,37 +1,43 @@
 # dsmftw dotfiles
 
-* My minimalist Linux configuration files. (Tailored towards my laptop distro. With some tweaking the dots can be used for the desktop which runs a different distro.)
+* My minimalist Linux configuration files. (Tailored towards my laptop distro. NOTE: minor tweaking is required for the dots to be used with my CentOS 7 desktop/server.)
 * A very basic bootstrap script that creates directories and symlinks.
 
 ## Setup details
 
 * OS `Gentoo`
+* Windowing System `X11`
 * DE `GNOME`
 * WM `GNOME Shell`
-* Terminal emulator `gnome-terminal` `st`
+* Terminal emulator `st` `gnome-terminal`
 * Terminal multiplexer `tmux`
 * Shell `bash`
 * File manager `ranger`
 * Text editor `vim`
-* Sound `mpd` + `ncmpcpp`
-* Video `mpv`
+* Audio player `mpd` + `ncmpcpp`
+* Media player `mpv`
 * Image viewer `sxiv`
-* Launcher `rofi`
-* Browser `firefox`
+* Menu/Launcher `rofi`
+* Web browser `firefox`
 * P2P `transmission`
+* Version control `git`
 * Difftool `meld`
 * PDF viewer `mupdf` + `zathura`
-* System monitoring `htop` `conky`
+* System monitor `htop` `conky`
 
 ## Installation
 
-Strart with cloning plugins of choice.
+Start with cloning plugins of choice.
 
 ### get plugins for
 
 #### shell colors
 
 * [base16-shell](https://github.com/chriskempson/base16-shell)
+
+#### tmux plugin manager
+
+* [tpm](https://github.com/tmux-plugins/tpm)
 
 #### vim
 
@@ -43,6 +49,7 @@ Strart with cloning plugins of choice.
 * [vim-airline](https://github.com/vim-airline/vim-airline)
 * [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 * [vim-commentary](https://github.com/tpope/vim-commentary)
+* [vim-fugitive](https://github.com/tpope/vim-fugitive)
 * [vim-json](https://github.com/elzr/vim-json)
 * [vim-surround](https://github.com/tpope/vim-surround)
 * [vim-tmux](https://github.com/tmux-plugins/vim-tmux)
