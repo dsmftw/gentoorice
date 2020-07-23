@@ -6,11 +6,6 @@ if [[ $- != *i* ]] ; then
 fi
 
 
-# Path vars
-NPMPATH=$HOME/.npm-global
-export GOPATH=$HOME/.golang
-export PATH=$PATH:$GOPATH/bin:$NPMPATH/bin
-
 # Aliases
 cp () { command cp -v "$@" ; }
 mv () { command mv -v "$@" ; }
@@ -23,14 +18,14 @@ alias la='ls -lA'
 alias vimrc='vim $HOME/dotfiles/vimrc'
 alias bashrc='vim $HOME/dotfiles/bashrc'
 alias dosmth='$(find ~/dotfiles/colorscripts/ -type f | shuf -n 1)'
-alias dots='cd $HOME/dotfiles'
-alias code='cd $HOME/codebase'
+alias cddots='cd $HOME/dotfiles'
+alias cdcode='cd $HOME/codebase'
 
 # Bash history
 export HISTFILESIZE=-1
 export HISTSIZE=-1
 export HISTTIMEFORMAT="[%F %T] "
-export HISTIGNORE="history*:pwd:ls:ll:la:df*:du*:bashrc*:vimrc*"
+export HISTIGNORE="history*:pwd:ls:ll:la:cd"
 export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
@@ -58,8 +53,3 @@ extract () {
     echo "'$1' is not a valid file"
   fi
 }
-
-# Base16 Shell
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
