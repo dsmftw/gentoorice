@@ -13,6 +13,9 @@
 	trustExitCode = false
 [alias]
 	st = status
+  br = branch -avv
+	adog = log --all --decorate --oneline --graph
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 [credential]
 	helper = cache --timeout=7200
 [github]
