@@ -1,15 +1,16 @@
 # dsmftw dotfiles
 
-* My minimalist Linux configuration files. (Tailored towards my laptop distro. NOTE: minor tweaking is required for the dots to be used with my CentOS 7 desktop/server.)
+* My minimalist Gentoo Linux configuration files.
 * A very basic bootstrap script that creates directories and symlinks.
 
 ## Setup details
 
 * OS `Gentoo`
 * Windowing System `X11`
-* DE `GNOME`
-* WM `GNOME Shell`
-* Terminal emulator `st` `gnome-terminal`
+* DE `n/a`
+* WM `dwm`
+* Menu/Launcher `dmenu`
+* Terminal emulator `st`
 * Terminal multiplexer `tmux`
 * Shell `bash`
 * File manager `ranger`
@@ -17,13 +18,13 @@
 * Audio player `mpd` + `ncmpcpp`
 * Media player `mpv`
 * Image viewer `sxiv`
-* Menu/Launcher `rofi`
 * Web browser `firefox`
 * P2P `transmission`
 * Version control `git`
 * Difftool `meld`
 * PDF viewer `mupdf` + `zathura`
 * System monitor `htop` `conky`
+* Feedreader `newsboat`
 
 ## Installation
 
@@ -41,8 +42,6 @@ Start with cloning plugins of choice.
 
 #### vim
 
-* [pathogen](https://github.com/tpope/vim-pathogen)
-* [base16-vim](https://github.com/chriskempson/base16-vim)
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 * [gruvbox](https://github.com/morhetz/gruvbox)
 * [syntastic](https://github.com/vim-syntastic/syntastic)
@@ -59,7 +58,7 @@ Start with cloning plugins of choice.
 Clone dotfiles:
 
 ```bash
-git clone https://github.com/dsmftw/dotfiles.git ~/dotfiles
+git clone https://github.com/dsmftw/gentoorice.git ~/dotfiles
 ```
 
 Run script to create symlinks:
