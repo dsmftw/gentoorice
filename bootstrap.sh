@@ -13,14 +13,16 @@ declare -a files=(
 "config/ranger/rc.conf"
 "config/ranger/scope.sh"
 "config/zathura/zathurarc"
+"newsboat/config"
 )
 
-mkdir -pv "$dst"/.config/{autostart,conky,mpd,mpv,ncmpcpp,ranger,zathura}
+/usr/bin/mkdir -pv "$dst"/.config/{autostart,conky,mpd,mpv,ncmpcpp,ranger,zathura}
+/usr/bin/mkdir -pv "$dst"/.newsboat
 
-printf "\nCreating symlinks...\n"
+/usr/bin/printf "\nCreating symlinks...\n"
 for file in "${files[@]}"; do
-    printf '  %s/.%-25.25s --> dotfiles/%s\n' "$dst" "$file" "$file"
-    ln -S.bak -s "$src"/"$file" "$dst"/."$file"
+    /usr/bin/printf '  %s/.%-25.25s --> dotfiles/%s\n' "$dst" "$file" "$file"
+    /usr/bin/ln -S.bak -sv "$src"/"$file" "$dst"/."$file"
 done
 
-printf "\n***** Done! *****\n\n"
+/usr/bin/printf "\n***** Done! *****\n\n"

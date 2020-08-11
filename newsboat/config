@@ -1,0 +1,14 @@
+auto-reload no
+
+bind-key j down
+bind-key k up
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key G end
+bind-key g home
+
+#color info green black bold
+color listfocus black yellow standout bold
+
+highlight all "----.*----" cyan
+highlight feedlist ".*(0/0))" black
