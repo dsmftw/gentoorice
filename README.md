@@ -1,13 +1,15 @@
-# dsmftw dotfiles
+# dsmftw dotfiles [Gentoo]
 
-* My minimalist Gentoo Linux configuration files.
-* A very basic bootstrap script that creates directories and symlinks.
+* my minimalist Gentoo Linux configuration files
+* bootstrap script
+* tmux statusbar scripts
 
 ## Setup details
 
 * OS `Gentoo`
+* Init system `OpenRC`
 * Windowing System `X11`
-* DE `n/a`
+* DM `XDM`
 * WM `dwm`
 * Menu/Launcher `dmenu`
 * Terminal emulator `st`
@@ -79,7 +81,7 @@ The `dotfiles/bootstrap.sh` script will create directories as needed and backup 
 
 Set terminal font size to **9**.
 
-## Screenshots
+## Screenshots [old GNOME setup]
 
 <img src="screenshots/scr1.png" width="640" >
 
